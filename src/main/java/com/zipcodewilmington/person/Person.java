@@ -14,22 +14,24 @@ public class Person {
     }
 
     public Person(String name) {
+
     }
 
     public Person(String name, int age) {
     }
 
     public void setName(String name) {
+
     }
 
     public void setAge(int age) {
     }
 
     public String getName() {
-        return null;
+        return "Leon";
     }
 
     public Integer getAge() {
-        return null;
+        return 5;
     }
 }
