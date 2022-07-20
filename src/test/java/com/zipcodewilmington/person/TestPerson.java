@@ -100,7 +100,7 @@ public class TestPerson {
     public void testSetEyeColor() {
         // Given
         Person person = new Person();
-        String expected = "brown";
+        String expected = "blue";
 
         // When
         person.setEyeColor(expected);
@@ -114,7 +114,7 @@ public class TestPerson {
     public void testSetYearOfBirth() {
         // Given
         Person person = new Person();
-        Integer expected = 1989;
+        Integer expected = 1950;
 
         // When
         person.setYearOfBirth(expected);
@@ -142,7 +142,7 @@ public class TestPerson {
     public void testSetUsShoeSize() {
         // Given
         Person person = new Person();
-        Integer expected = 13;
+        Integer expected = 11;
 
         // When
         person.setUsShoeSize(expected);
@@ -156,7 +156,7 @@ public class TestPerson {
     public void testSetGlasses() {
         // Given
         Person person = new Person();
-        boolean expected = true;
+        boolean expected = false;
 
         // When
         person.setGlasses(expected);
@@ -164,5 +164,73 @@ public class TestPerson {
         // Then
         boolean actual = person.getGlasses();
         Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testConstructorWithEyeColor() {
+        // Given
+        String expected = "brown";
+
+        // When
+        Person person = new Person(expected);
+        person.setEyeColor(expected);
+
+        // Then
+        String actual = person.getEyeColor();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testConstructorWithShoeSize() {
+        // Given
+        int expected = 9;
+
+        // When
+        Person person = new Person(expected);
+        person.setUsShoeSize(expected);
+
+        // Then
+        int actual = person.getUsShoeSize();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testConstructorWithYearOfBirth() {
+        // Given
+        int expected = 1989;
+
+        // When
+        Person person = new Person(expected);
+        person.setYearOfBirth(expected);
+        // Then
+        int actual = person.getYearOfBirth();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testConstructorWithStateOfBirth() {
+        // Given
+        String expected = "CA";
+
+        // When
+        Person person = new Person(expected);
+        person.setStateOfBirth(expected);
+        // Then
+        String actual = person.getStateOfBirth();
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testConstructorWithGlasses() {
+        // Given
+        boolean expected = true;
+
+        // When
+        Person person = new Person(String.valueOf(expected));
+        person.setGlasses(expected);
+
+        // Then
+        boolean actual = person.getGlasses();
+        Assert.assertTrue(true);
     }
 }

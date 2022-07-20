@@ -7,11 +7,11 @@ public class Person {
     private String name = "";
     private int age = Integer.MAX_VALUE;
 
-    private String eyeColor = "brown";
-    private int yearOfBirth = 1989;
-    private String stateOfBirth ="PA";
-    private int usShoeSize = 13;
-    private boolean glasses = true;
+    private String eyeColor;
+    private int yearOfBirth;
+    private String stateOfBirth;
+    private int usShoeSize;
+    private boolean glasses;
 
     public Person() {
 //        this.name = "bob";
